@@ -30,8 +30,12 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (strict: never commit secrets, allow example template)
+.env
+.env*.local
+.env.production
+.env.development
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +43,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal specifications & agent planning documents
+MEMORY.md
+PHASES.md
+PRD.md
+RULES.md
+ARCHITECTURE.md
+DATABASE.md
+DESIGN.md
+GEMINI.md
